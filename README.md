@@ -9,4 +9,4 @@ This is used to sense the current and alert user through LEDs and a Buzzer how h
 
 
 Setup:
-
+Unfortunuatly the breadboard we were given was quite small and it was difficult to find a way to fit lots of parts. The setup for this project is 2 LEDs, potentiolmeter and buzzer. The first element are the LEDs which are used to dim and brighten using the potentiolmeter, they work through GPIO pins 14 and 15 and through groudn cables and it also required two resistors in the breadboard, the next element is the potentiolmeter which controls resistance and is our project it controls the lights brightness levels and the buzzer tone, the final part is the buzzer which plays a different tone depending on the resistance level.
