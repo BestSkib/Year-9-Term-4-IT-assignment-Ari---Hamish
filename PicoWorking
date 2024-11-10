@@ -1,11 +1,147 @@
 Video of full project
 https://cgsacteduau-my.sharepoint.com/:v:/g/personal/34642_cgs_act_edu_au/EadIzk9t9VpCvp77npCbmcYBrEOoTDoGCNhi_Gc6Bd5G0Q?e=kN55k7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
-Video of Just Buzzer
+Just Buzzer
+3 November 6:15pm
 https://cgsacteduau-my.sharepoint.com/:v:/g/personal/34642_cgs_act_edu_au/EVEbxQBb90ZDo-DfAd3pYDkBP4WyeAq3EZg2gCgZJo4HuQ?e=mmODYr&nav=eyJwbGF5YmFja09wdGlvbnMiOnt9LCJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbE1vZGUiOiJtaXMiLCJyZWZlcnJhbFZpZXciOiJwb3N0cm9sbC1jb3B5bGluayIsInJlZmVycmFsUGxheWJhY2tTZXNzaW9uSWQiOiI5MjRhMGYxZS1hZDY0LTQxNTUtOTlkMi02ZTc0MjY1MmU3MzgifX0%3D
+Code:
+from machine import Pin, ADC, PWM
+import time 
+
+
+buzzer = PWM(Pin(15))
+
+
+def play_tone(frequency, duration):
+    
+    buzzer.freq(frequency)
+   
+    buzzer.duty_u16(200)
+    
+    time.sleep(duration)
+    
+    buzzer.duty_u16(0)
+
+led = Pin(1, Pin.OUT)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(311, 0.35)  # Eb4 - 311 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(466, 0.15)  # Bb4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(311, 0.35)  # Eb4 - 311 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(466, 0.15)  # Bb4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.3)
+
+#second phrase
+play_tone(587, 0.5)  # D5 - 587 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(587, 0.5)  # D5 - 587 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(587, 0.5)  # D5 - 587 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(622, 0.35)  # Eb5 - 622 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(466, 0.15)  # Bb4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(370, 0.5)  # Fs4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(311, 0.35)  # Eb4 - 311 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(466, 0.15)  # Bb4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.3)
+
+# Middle section
+play_tone(784, 0.5)  # G5 - 587 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.15)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.15)
+
+play_tone(392, 0.15)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.15)
+
+play_tone(784, 0.5)  # G5 - 587 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(466, 0.15)  # Bb4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(370, 0.5)  # Fs4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(311, 0.35)  # Eb4 - 311 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(466, 0.15)  # Bb4 - 466 Hz
+led.toggle()
+time.sleep(0.1)
+
+play_tone(392, 0.5)  # G4 - 392 Hz
+led.toggle()
+time.sleep(0.3)
+
+
+# Clean up by deactivating the PWM
+buzzer.deinit()
+
+
 
 Potentiolmeter working
-15 October 9:41
+15 October 9:41am
 https://cgsacteduau-my.sharepoint.com/:v:/g/personal/34642_cgs_act_edu_au/EZnWGgCcpi1IuDVkL5-1XJ8BqrgscSp5CYHKZEXewD6AOw?e=NlmfrJ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 Code:
 import machine
@@ -21,7 +157,7 @@ While True:
   utime.sleep(.1)
 
 LED working
-24 September, 11:49
+24 September, 11:49am
 https://cgsacteduau-my.sharepoint.com/:i:/g/personal/34642_cgs_act_edu_au/EbdANjeKvHBNmuzAiQPBt4gB80xrqFZO1thWzbtXXBR19g?e=duAG2A
 Code:
 import machine
