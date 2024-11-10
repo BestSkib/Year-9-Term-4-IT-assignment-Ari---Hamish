@@ -9,3 +9,13 @@ https://cgsacteduau-my.sharepoint.com/:v:/g/personal/34642_cgs_act_edu_au/EZnWGg
 
 Photo of Just LED
 https://cgsacteduau-my.sharepoint.com/:i:/g/personal/34642_cgs_act_edu_au/EbdANjeKvHBNmuzAiQPBt4gB80xrqFZO1thWzbtXXBR19g?e=duAG2A
+
+Code:
+import machine
+import utime
+
+led_external = machine.Pin(24,machine.Pin.OUT)
+
+While True:
+  led_external.toggle()
+  utime.sleep(2)
